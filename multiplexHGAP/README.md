@@ -39,7 +39,7 @@ Step 3: In ``Advanced Analysis Parameters > Filters to add to the DataSet``, add
 * **bcr**: Barcode Reverse.  The 0-indexed position of the reverse barcode in the BarcodeSet used for barcoding
 * **bq** : Barcode Quality Score.  SW alignment score of the barcode on integer scale of 0-100.  Recommended minimum 45.
 
-![Advanced Analysis Parameters Screenshot](https://github.com/PacificBiosciences/SMRT-Link/multiplexHGAP/images/manual_filtering_screenshot.png)
+![Advanced Analysis Parameters Screenshot](https://github.com/PacificBiosciences/SMRT-Link/blob/master/multiplexHGAP/images/manual_filtering_screenshot.png)
 
 Step 4: Change any other parameters as desired.  Click **Start**.
 
@@ -66,12 +66,12 @@ the examples correspond to the following barcodes:
 
 ## Auotomated HGAP Job Submission per Barcode using Python
 
-Automating barcoded job submission can be done using the tools and Python API in the SMRT-Link installation.  The scripts needed for this tutorial can be found below.  The scripts use the [pbcommand](https://github.com/PacificBiosciences/pbcommand) library and the [pbservice](https://github.com/PacificBiosciences/SMRT-Link/wiki/pbservice) tool to interact with SMRT-Link services.  You will need to know the location of your SMRT-Link install to modify the scripts for your system. 
+Automating barcoded job submission can be done using the tools and Python API in the SMRT-Link installation.  The scripts needed for this tutorial can be found below.  The scripts use the [pbcommand](https://github.com/PacificBiosciences/pbcommand) library and the [pbservice](https://github.com/PacificBiosciences/SMRT-Link/blob/master/wiki/pbservice) tool to interact with SMRT-Link services.  You will need to know the location of your SMRT-Link install to modify the scripts for your system. 
 
-* [Bash quickstart (multiplexHGAP4.sh)](https://github.com/PacificBiosciences/SMRT-Link/multiplexHGAP/multiplexHGAP/scripts/multiplexHGAP4.sh)
-* [Splitting and Importing (splitBarcodeUpload.py)](https://github.com/PacificBiosciences/SMRT-Link/multiplexHGAP/multiplexHGAP/scripts/splitBarcodeUpload.py)
-* [Submitting Jobs (multiplexSubmit.py)](https://github.com/PacificBiosciences/SMRT-Link/multiplexHGAP/multiplexHGAP/scripts/multiplexSubmit.py)
-* [HGAP presets json (presets_template.json)](https://github.com/PacificBiosciences/SMRT-Link/multiplexHGAP/multiplexHGAP/templates/presets_template.json)
+* [Bash quickstart (multiplexHGAP4.sh)](https://github.com/PacificBiosciences/SMRT-Link/blob/master/multiplexHGAP/multiplexHGAP/scripts/multiplexHGAP4.sh)
+* [Splitting and Importing (splitBarcodeUpload.py)](https://github.com/PacificBiosciences/SMRT-Link/blob/master/multiplexHGAP/multiplexHGAP/scripts/splitBarcodeUpload.py)
+* [Submitting Jobs (multiplexSubmit.py)](https://github.com/PacificBiosciences/SMRT-Link/blob/master/multiplexHGAP/multiplexHGAP/scripts/multiplexSubmit.py)
+* [HGAP presets json (presets_template.json)](https://github.com/PacificBiosciences/SMRT-Link/blob/master/multiplexHGAP/multiplexHGAP/templates/presets_template.json)
 
 ### Quickstart to Automation
 
