@@ -46,7 +46,7 @@ def main(parser):
     oFile.write(outfmt.format(subsetName='subsetName',subsetId='subsetId',jobState='jobState'))
     print "Splitting by barcode"
     bcSets  = sset.split(barcodes=True)
-    print "Importing {n} barcodes to {host}:{port}".format(n=len(bcSets),
+    print "Importing {n} barcodes to {host}:{port}".format(n=len(filter(lambda s:len(s)>=args.minSubreads,bcSets)),
                                                            host=args.host,
                                                            port=args.port)
     for bcSet in bcSets:
