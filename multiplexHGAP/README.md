@@ -68,10 +68,10 @@ the examples correspond to the following barcodes:
 
 Automating barcoded job submission can be done using the tools and Python API in the SMRT-Link installation.  The scripts needed for this tutorial can be found below.  The scripts use the [pbcommand](https://github.com/PacificBiosciences/pbcommand) library and the [pbservice](https://github.com/PacificBiosciences/SMRT-Link/blob/master/wiki/pbservice) tool to interact with SMRT-Link services.  You will need to know the location of your SMRT-Link install to modify the scripts for your system. 
 
-* [Bash quickstart (multiplexHGAP4.sh)](https://github.com/PacificBiosciences/SMRT-Link/blob/master/multiplexHGAP/multiplexHGAP/scripts/multiplexHGAP4.sh)
-* [Splitting and Importing (splitBarcodeUpload.py)](https://github.com/PacificBiosciences/SMRT-Link/blob/master/multiplexHGAP/multiplexHGAP/scripts/splitBarcodeUpload.py)
-* [Submitting Jobs (multiplexSubmit.py)](https://github.com/PacificBiosciences/SMRT-Link/blob/master/multiplexHGAP/multiplexHGAP/scripts/multiplexSubmit.py)
-* [HGAP presets json (presets_template.json)](https://github.com/PacificBiosciences/SMRT-Link/blob/master/multiplexHGAP/multiplexHGAP/templates/presets_template.json)
+* [Bash quickstart (multiplexHGAP4.sh)](https://github.com/PacificBiosciences/SMRT-Link/blob/master/multiplexHGAP/scripts/multiplexHGAP4.sh)
+* [Splitting and Importing (splitBarcodeUpload.py)](https://github.com/PacificBiosciences/SMRT-Link/blob/master/multiplexHGAP/scripts/splitBarcodeUpload.py)
+* [Submitting Jobs (multiplexSubmit.py)](https://github.com/PacificBiosciences/SMRT-Link/blob/master/multiplexHGAP/scripts/multiplexSubmit.py)
+* [HGAP presets json (presets_template.json)](https://github.com/PacificBiosciences/SMRT-Link/blob/master/multiplexHGAP/templates/presets_template.json)
 
 ### Quickstart to Automation
 
@@ -140,7 +140,7 @@ The json file linked to on this wiki is for HGAP4 and can be generated using ``p
 ## Comparing Results
 The following script is provided as a way to collate results reports for multiple SMRT-Link jobs.  Note that this tool depends on the python module [pandas](http://pandas.pydata.org/) (not incuded in the SMRT Analysis python) as well as [pbcommand](https://github.com/PacificBiosciences/pbcommand).  
 
-* [collateReports.py](://github.com/PacificBiosciences/SMRT-Link/multiplexHGAP/multiplexHGAP/scripts/collateReports.py)
+* [collateReports.py](://github.com/PacificBiosciences/SMRT-Link/multiplexHGAP/scripts/collateReports.py)
 
 This takes a csv file with the minimum columns ``host``, ``jobId``, and ``jobName`` and attempts to collate reports from the listed jobs for export to csv and excel formats.
 
