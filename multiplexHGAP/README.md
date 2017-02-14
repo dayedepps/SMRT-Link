@@ -2,20 +2,20 @@
 Running multiplexed samples for assembly directly in the SMRT-Link GUI is not currently supported as an automated process.  The tools to do so are readily available both in the GUI and on the command line.  These instructions will work with **SMRT Analysis v4.0** and later versions.
 
 ## Target Audience
-This wiki is intended for users who have multiplexed datasets to be passed through SMRT-Link protocols on a per-barcode basis.  The most common example is multiplexed assembly of small (microbial) genomes using the HGAP 4 protocol.  Other downstream protocols, e.g. resequencing per barcode, can also be run using the instructions here.  
+This wiki is intended for users who have multiplexed datasets to be passed through SMRT-Link applications on a per-barcode basis.  The most common example is multiplexed assembly of small (microbial) genomes using the HGAP 4 application.  Other downstream applications, e.g. resequencing per barcode, can also be run using the instructions here.  
 
-Note that LAA2 and CCS2 protocols handle barcoding within the workflow of a single job and users **do not** need this method for those analyses.
+Note that LAA2 and CCS2 applications handle barcoding within the workflow of a single job and users **do not** need this method for those analyses.
 
 ## Overview
-This tutorial describes two methods for running SMRT-Link protocols on a per-barcode basis.  
+This tutorial describes two methods for running SMRT-Link applications on a per-barcode basis.  
 * Manual Setup (GUI)
 * Automated Submission (Command Line)
 
 ### Barcoded SubreadSet
-Both methods require running the standard Barcoding protocol prior to the steps listed here.  The output barcoded subreadset from the Barcoding protocol is the input for this tutorial.
+Both methods require running the standard Barcoding application prior to the steps listed here.  The output barcoded subreadset from the Barcoding application is the input for this tutorial.
 
 ### Collating Results
-A final option to collate reports from multiple SMRT-Link jobs (using the same protocol) is provided at the end for command-line users.
+A final option to collate reports from multiple SMRT-Link jobs (using the same application) is provided at the end for command-line users.
 
 ## Manual HGAP per Barcode Using GUI
 Step 1: Select barcoded data. From the SMRT-Link home page, 
@@ -119,14 +119,14 @@ After the script finishes, the output directory contains the following:
 Jobs will usually still be running after the submit script finishes, and they will all run concurrently by default.  If you are concerned for overloading your cluster environment with too many jobs, you can set the ``SLEEP`` parameter in ``multiplexHGAP.sh`` to wait N minutes between submitting jobs.
 
 ### Splitting and Importing each barcode
-The script ``splitBarcodeUpload.py`` can be used independently to upload barcoded subsets to you SMRT-Link server for further analysis in any downstream SMRT-Link protocol.  See ``python splitBarcodeUpload.py --help`` for more information.
+The script ``splitBarcodeUpload.py`` can be used independently to upload barcoded subsets to you SMRT-Link server for further analysis in any downstream SMRT-Link application.  See ``python splitBarcodeUpload.py --help`` for more information.
 
 Note that this script does *not* physically demultiplex the original subreads.bam.  Each imported subset is an xml file pointing to the original barcoded subreadset with an associated set of filters for barcode value and quality.  
 
 See [documentation](http://pacbiofileformats.readthedocs.io/en/3.0/DataSet.html) for more information on the dataset model. 
 
 ### Multiple Job Sumbission
-The script ``multiplexSubmit.py`` can also be used independently to submit multiple SMRT-Link jobs given a presets.json template and a csv file of input subreadsets IDs from your server.  Just change the template in the script to use this with other SMRT-Link protocols.  The script will pick up the available options from the json file.
+The script ``multiplexSubmit.py`` can also be used independently to submit multiple SMRT-Link jobs given a presets.json template and a csv file of input subreadsets IDs from your server.  Just change the template in the script to use this with other SMRT-Link applications.  The script will pick up the available options from the json file.
 
     PRESETS_TEMPLATE='/path/to/presets_template.json'
 
